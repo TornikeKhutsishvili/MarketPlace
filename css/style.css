@@ -56,6 +56,7 @@ main { min-height: 60vh; padding-block: 2rem; }
 .btn--accent { background: var(--accent); color: #1f1300; }
 .btn--accent:hover { background: #d98a05; }
 .btn--sm { padding: .4rem .8rem; font-size: .9rem; }
+.btn--block { width: 100%; }
 
 /* ===== Header / nav ===== */
 .site-header {
@@ -113,17 +114,21 @@ main { min-height: 60vh; padding-block: 2rem; }
 .slider-btn--next { right: .75rem; }
 .slider-dots { position: absolute; bottom: .75rem; left: 0; right: 0; display: flex; justify-content: center; gap: .5rem; }
 .slider-dots button {
-  width: 12px; height: 12px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
-  background: rgb(255 255 255 / 50%);
+  display: grid; place-items: center; width: 24px; height: 24px; border: 0; padding: 0;
+  cursor: pointer; background: none;
 }
-.slider-dots button[aria-current="true"] { background: #fff; transform: scale(1.25); }
+.slider-dots button::before {
+  content: ""; width: 12px; height: 12px; border-radius: 50%; background: rgb(255 255 255 / 50%);
+}
+.slider-dots button[aria-current="true"]::before { background: #fff; transform: scale(1.25); }
 
 /* ===== Sections ===== */
 .section { margin-top: 3rem; }
 .section-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.25rem; }
 .section-head h2 { margin: 0; }
 
-.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+/* min-height reserves space for JS-rendered content to avoid layout shift (CLS) */
+.category-grid { min-height: 110px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
 .category-card {
   display: grid; place-items: center; gap: .3rem; padding: 1.2rem; background: var(--surface);
   border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-weight: 600;
@@ -137,7 +142,7 @@ main { min-height: 60vh; padding-block: 2rem; }
 .feature .icon { font-size: 1.8rem; }
 
 /* ===== Product cards ===== */
-.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
+.product-grid { min-height: 420px; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
 .card {
   display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden; transition: transform .2s, box-shadow .2s;
@@ -151,13 +156,13 @@ main { min-height: 60vh; padding-block: 2rem; }
 .card-body h3 { font-size: 1.05rem; margin: 0; }
 .card-body h3 a { color: var(--text); }
 .card-cat { color: var(--muted); font-size: .85rem; }
-.rating { color: var(--accent); font-size: .9rem; }
+.rating { color: #b45309; font-size: .9rem; }
 .price { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
 .price s { color: var(--muted); font-weight: 400; font-size: .9rem; margin-left: .35rem; }
 .card-actions { margin-top: auto; padding-top: .6rem; }
 .card-actions .btn { width: 100%; }
 .tag {
-  display: inline-block; font-size: .75rem; font-weight: 700; background: #fee2e2; color: var(--danger);
+  display: inline-block; font-size: .75rem; font-weight: 700; background: #fee2e2; color: #991b1b;
   padding: .1rem .5rem; border-radius: 999px; width: fit-content;
 }
 
@@ -208,6 +213,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--primary); outlin
 [hidden] { display: none !important; }
 
 /* ===== Product page ===== */
+#product-root { min-height: 520px; }
 .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .product-detail .card-media { border-radius: var(--radius); font-size: 9rem; aspect-ratio: 1; }
 .product-info .price { font-size: 2rem; }

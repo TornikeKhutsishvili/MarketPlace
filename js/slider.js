@@ -23,7 +23,7 @@
   function go(i) {
     index = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${index * 100}%)`;
-    slides.forEach((s, n) => s.setAttribute("aria-hidden", String(n !== index)));
+    slides.forEach((s, n) => { s.inert = n !== index; });
     dots.forEach((d, n) => d.setAttribute("aria-current", String(n === index)));
   }
 

@@ -37,13 +37,15 @@
           </div>
           <fieldset id="category-filters"><legend>კატეგორია</legend></fieldset>
           <div class="field">
-            <label for="max-price">მაქს. ფასი: <output id="max-price-out" for="max-price">2100.00 ₾</output></label>
+            <label for="max-price">მაქს. ფასი: <span id="max-price-out">2100.00 ₾</span></label>
             <input id="max-price" type="range" min="10" max="2100" step="10" value="2100">
           </div>
+          <button class="btn btn--sm" type="submit">ძიება</button>
           <button class="btn btn--outline btn--sm" type="reset">გასუფთავება</button>
         </form>
 
-        <section aria-label="პროდუქტები">
+        <section aria-labelledby="list-title">
+          <h2 id="list-title" class="visually-hidden">პროდუქტები</h2>
           <div class="catalog-toolbar">
             <button class="btn btn--outline btn--sm filters-toggle" type="button" aria-expanded="false">⚙ ფილტრები</button>
             <p id="result-count" role="status" aria-live="polite"></p>
