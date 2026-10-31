@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>კონტაქტი — MarketPlace</title>
+  <meta name="description" content="დაგვიკავშირდით MarketPlace-ზე კითხვებისა და თანამშრომლობისთვის.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">მთავარ შინაარსზე გადასვლა</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Market<span>Place</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="მენიუ">☰</button>
+      <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="catalog.html">კატალოგი</a></li>
+          <li><a href="contact.html" aria-current="page">კონტაქტი</a></li>
+          <li><a href="account.html">შესვლა</a></li>
+          <li><a class="cart-link" href="cart.html">🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container two-col">
+      <section aria-labelledby="c-title">
+        <h1 id="c-title">დაგვიკავშირდით</h1>
+        <p>გაქვთ შეკითხვა ან გსურთ გახდეთ გამყიდველი? მოგვწერეთ და 24 საათში გიპასუხებთ.</p>
+        <ul>
+          <li>📍 თბილისი, საქართველო</li>
+          <li>✉️ <a href="mailto:info@marketplace.ge">info@marketplace.ge</a></li>
+          <li>🕘 ორშ–პარ: 10:00–19:00</li>
+        </ul>
+      </section>
+      <div class="form-card">
+        <form data-validate data-success="მადლობა! თქვენი შეტყობინება გაიგზავნა." novalidate>
+          <p class="form-status" role="status" hidden></p>
+          <div class="field"><label for="c-name">სახელი</label><input id="c-name" name="name" type="text" autocomplete="name"><span class="error-msg"></span></div>
+          <div class="field"><label for="c-email">ელ-ფოსტა</label><input id="c-email" name="email" type="email" autocomplete="email"><span class="error-msg"></span></div>
+          <div class="field"><label for="c-phone">ტელეფონი (არასავალდებულო)</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"><span class="error-msg"></span></div>
+          <div class="field"><label for="c-msg">შეტყობინება</label><textarea id="c-msg" name="message" rows="5"></textarea><span class="error-msg"></span></div>
+          <button class="btn" type="submit">გაგზავნა</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>MarketPlace</h2><p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p></div>
+        <div><h2>ნავიგაცია</h2><ul><li><a href="catalog.html">კატალოგი</a></li><li><a href="cart.html">კალათა</a></li><li><a href="account.html">ანგარიში</a></li></ul></div>
+        <div><h2>კონტაქტი</h2><address>თბილისი, საქართველო<br><a href="mailto:info@marketplace.ge">info@marketplace.ge</a></address></div>
+      </div>
+      <p class="copyright">© <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე ხუციშვილი.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>
