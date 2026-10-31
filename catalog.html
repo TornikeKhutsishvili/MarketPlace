@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>კატალოგი — MarketPlace</title>
+  <meta name="description" content="MarketPlace-ის პროდუქტების კატალოგი ძიებით, ფილტრებითა და დალაგებით.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">მთავარ შინაარსზე გადასვლა</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Market<span>Place</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="მენიუ">☰</button>
+      <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="catalog.html" aria-current="page">კატალოგი</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+          <li><a href="account.html">შესვლა</a></li>
+          <li><a class="cart-link" href="cart.html">🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <h1>პროდუქტების კატალოგი</h1>
+      <div class="catalog-layout">
+        <form class="filters" id="filter-form" aria-label="ფილტრები">
+          <div class="field">
+            <label for="search">ძიება</label>
+            <input id="search" type="search" placeholder="მაგ: ყურსასმენი" autocomplete="off">
+          </div>
+          <fieldset id="category-filters"><legend>კატეგორია</legend></fieldset>
+          <div class="field">
+            <label for="max-price">მაქს. ფასი: <output id="max-price-out" for="max-price">2100.00 ₾</output></label>
+            <input id="max-price" type="range" min="10" max="2100" step="10" value="2100">
+          </div>
+          <button class="btn btn--outline btn--sm" type="reset">გასუფთავება</button>
+        </form>
+
+        <section aria-label="პროდუქტები">
+          <div class="catalog-toolbar">
+            <button class="btn btn--outline btn--sm filters-toggle" type="button" aria-expanded="false">⚙ ფილტრები</button>
+            <p id="result-count" role="status" aria-live="polite"></p>
+            <div>
+              <label for="sort" class="visually-hidden">დალაგება</label>
+              <select id="sort">
+                <option value="popular">პოპულარობით</option>
+                <option value="price-asc">ფასი: ზრდადობით</option>
+                <option value="price-desc">ფასი: კლებადობით</option>
+                <option value="name">სახელით</option>
+              </select>
+            </div>
+          </div>
+          <div class="product-grid" id="product-list"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>MarketPlace</h2><p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p></div>
+        <div><h2>ნავიგაცია</h2><ul><li><a href="catalog.html">კატალოგი</a></li><li><a href="cart.html">კალათა</a></li><li><a href="account.html">ანგარიში</a></li></ul></div>
+        <div><h2>კონტაქტი</h2><address>თბილისი, საქართველო<br><a href="mailto:info@marketplace.ge">info@marketplace.ge</a></address></div>
+      </div>
+      <p class="copyright">© <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე ხუციშვილი.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</body>
+</html>
