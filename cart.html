@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>კალათა — MarketPlace</title>
+  <meta name="description" content="თქვენი შეკვეთა MarketPlace-ზე.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">მთავარ შინაარსზე გადასვლა</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Market<span>Place</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="მენიუ">☰</button>
+      <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="catalog.html">კატალოგი</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+          <li><a href="account.html">შესვლა</a></li>
+          <li><a class="cart-link" href="cart.html" aria-current="page">🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <h1>თქვენი კალათა</h1>
+      <div class="cart-layout">
+        <section id="cart-items" aria-label="კალათის პროდუქტები"></section>
+        <aside class="summary" id="summary" aria-label="შეკვეთის შეჯამება">
+          <h2>შეჯამება</h2>
+          <dl>
+            <div class="row"><dt>ჯამი</dt><dd id="sum-subtotal">0 ₾</dd></div>
+            <div class="row"><dt>ფასდაკლება</dt><dd id="sum-discount">0 ₾</dd></div>
+            <div class="row"><dt>მიტანა</dt><dd id="sum-shipping">0 ₾</dd></div>
+            <div class="row total"><dt>სულ</dt><dd id="sum-total">0 ₾</dd></div>
+          </dl>
+          <form id="promo-form" class="field">
+            <label for="promo">პრომო კოდი (სცადეთ MARKET10)</label>
+            <input id="promo" type="text" autocomplete="off">
+            <button class="btn btn--outline btn--sm" type="submit">გამოყენება</button>
+            <span class="error-msg" id="promo-msg" role="status"></span>
+          </form>
+          <button class="btn btn--accent" id="checkout-btn" type="button" style="width:100%">შეკვეთის გაფორმება</button>
+          <p class="card-cat">უფასო მიტანა 100 ₾-დან.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>MarketPlace</h2><p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p></div>
+        <div><h2>ნავიგაცია</h2><ul><li><a href="catalog.html">კატალოგი</a></li><li><a href="cart.html">კალათა</a></li><li><a href="account.html">ანგარიში</a></li></ul></div>
+        <div><h2>კონტაქტი</h2><address>თბილისი, საქართველო<br><a href="mailto:info@marketplace.ge">info@marketplace.ge</a></address></div>
+      </div>
+      <p class="copyright">© <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე ხუციშვილი.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>
