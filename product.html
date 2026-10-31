@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>პროდუქტი — MarketPlace</title>
+  <meta name="description" content="პროდუქტის დეტალური გვერდი MarketPlace-ზე.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">მთავარ შინაარსზე გადასვლა</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Market<span>Place</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="მენიუ">☰</button>
+      <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+        <ul>
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="catalog.html">კატალოგი</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+          <li><a href="account.html">შესვლა</a></li>
+          <li><a class="cart-link" href="cart.html">🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <div id="product-root"></div>
+      <section class="section" id="related-section" aria-labelledby="rel-title">
+        <div class="section-head"><h2 id="rel-title">მსგავსი პროდუქტები</h2></div>
+        <div class="product-grid" id="related-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>MarketPlace</h2><p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p></div>
+        <div><h2>ნავიგაცია</h2><ul><li><a href="catalog.html">კატალოგი</a></li><li><a href="cart.html">კალათა</a></li><li><a href="account.html">ანგარიში</a></li></ul></div>
+        <div><h2>კონტაქტი</h2><address>თბილისი, საქართველო<br><a href="mailto:info@marketplace.ge">info@marketplace.ge</a></address></div>
+      </div>
+      <p class="copyright">© <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე ხუციშვილი.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/product.js" defer></script>
+</body>
+</html>
