@@ -63,7 +63,7 @@ npx serve .
 
 ## ⚡ ოპტიმიზაცია
 
-**Lighthouse (ცოცხალი საიტი, მობილური):** Accessibility 100, Best Practices 100, SEO 100, Performance 82–93. HTML ვალიდაცია (html-validate) — შეცდომების გარეშე.
+**Lighthouse (ცოცხალი საიტი, მობილური):** Accessibility 100, Best Practices 100, SEO 100, Performance 84–93. HTML ვალიდაცია (html-validate) — შეცდომების გარეშე.
 
 - ერთი CSS ფაილი, ერთი HTTP მოთხოვნა სტილებზე; გამოუყენებელი კოდის გარეშე.
 - სკრიპტები `defer`-ით — რენდერს არ ბლოკავს, თითოეულ გვერდზე მხოლოდ საჭირო მოდულები იტვირთება.
