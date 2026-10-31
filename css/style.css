@@ -221,6 +221,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--primary); outlin
 .qty button { width: 36px; height: 36px; border: 0; background: #f1f5f9; cursor: pointer; font-size: 1.1rem; }
 .qty input { width: 52px; text-align: center; border: 0; border-radius: 0; padding: .3rem; }
 .breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
+.breadcrumb a { text-decoration: underline; }
 .specs { width: 100%; border-collapse: collapse; margin-top: 1rem; }
 .specs th, .specs td { padding: .5rem; border-bottom: 1px solid var(--border); text-align: left; }
 @media (max-width: 768px) { .product-detail { grid-template-columns: 1fr; } }
