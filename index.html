@@ -1,95 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ka">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MarketPlace — ონლაინ მარკეტპლეისი</title>
-  <meta name="description" content="MarketPlace — ათასობით პროდუქტი ერთ სივრცეში: ელექტრონიკა, მოდა, სახლი, სპორტი და სხვა.">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#content">მთავარ შინაარსზე გადასვლა</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Market<span>Place</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="მენიუ">☰</button>
-      <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
-        <ul>
-          <li><a href="index.html" aria-current="page">მთავარი</a></li>
-          <li><a href="catalog.html">კატალოგი</a></li>
-          <li><a href="contact.html">კონტაქტი</a></li>
-          <li><a href="account.html">შესვლა</a></li>
-          <li><a class="cart-link" href="cart.html">🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="content">
-    <div class="container">
-      <section class="slider" data-slider aria-roledescription="carousel" aria-label="აქციები">
-        <div class="slider-track">
-          <article class="slide slide--1">
-            <h1>გაზაფხულის დიდი გაყიდვა</h1>
-            <p>ელექტრონიკაზე 30%-მდე ფასდაკლება. შეუკვეთეთ დღესვე და მიიღეთ უფასო მიტანა.</p>
-            <p><a class="btn btn--accent" href="catalog.html?category=electronics">ყიდვა</a></p>
-          </article>
-          <article class="slide slide--2">
-            <h2>გახდი გამყიდველი</h2>
-            <p>განათავსე შენი პროდუქტები და მიაღწიე ათასობით მყიდველს მთელ საქართველოში.</p>
-            <p><a class="btn btn--accent" href="contact.html">დაგვიკავშირდი</a></p>
-          </article>
-          <article class="slide slide--3">
-            <h2>სპორტი და ჯანმრთელობა</h2>
-            <p>აღჭურვილობა ვარჯიშისთვის საუკეთესო ფასებად.</p>
-            <p><a class="btn btn--accent" href="catalog.html?category=sports">ნახე კოლექცია</a></p>
-          </article>
-        </div>
-        <button class="slider-btn slider-btn--prev" type="button" aria-label="წინა სლაიდი">‹</button>
-        <button class="slider-btn slider-btn--next" type="button" aria-label="შემდეგი სლაიდი">›</button>
-        <div class="slider-dots"></div>
-      </section>
-
-      <section class="section" aria-labelledby="cat-title">
-        <div class="section-head"><h2 id="cat-title">კატეგორიები</h2></div>
-        <div class="category-grid" id="category-list"></div>
-      </section>
-
-      <section class="section" aria-labelledby="top-title">
-        <div class="section-head">
-          <h2 id="top-title">ყველაზე პოპულარული</h2>
-          <a href="catalog.html">ყველა პროდუქტი →</a>
-        </div>
-        <div class="product-grid" id="featured-list"></div>
-      </section>
-
-      <section class="section" aria-labelledby="why-title">
-        <div class="section-head"><h2 id="why-title">რატომ MarketPlace?</h2></div>
-        <div class="features">
-          <div class="feature"><span class="icon" aria-hidden="true">🚚</span><h3>სწრაფი მიტანა</h3><p>თბილისში — 24 საათში, რეგიონებში — 2-3 დღეში.</p></div>
-          <div class="feature"><span class="icon" aria-hidden="true">🔒</span><h3>დაცული გადახდა</h3><p>თქვენი მონაცემები და გადახდები დაცულია.</p></div>
-          <div class="feature"><span class="icon" aria-hidden="true">↩️</span><h3>მარტივი დაბრუნება</h3><p>14 დღე პროდუქტის უპრობლემო დაბრუნებისთვის.</p></div>
-          <div class="feature"><span class="icon" aria-hidden="true">⭐</span><h3>გადამოწმებული გამყიდველები</h3><p>მხოლოდ რეიტინგიანი და სანდო გამყიდველები.</p></div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div><h2>MarketPlace</h2><p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p></div>
-        <div><h2>ნავიგაცია</h2><ul><li><a href="catalog.html">კატალოგი</a></li><li><a href="cart.html">კალათა</a></li><li><a href="account.html">ანგარიში</a></li></ul></div>
-        <div><h2>კონტაქტი</h2><address>თბილისი, საქართველო<br><a href="mailto:info@marketplace.ge">info@marketplace.ge</a></address></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MarketPlace — ონლაინ მარკეტპლეისი</title>
+    <meta
+      name="description"
+      content="MarketPlace — ათასობით პროდუქტი ერთ სივრცეში: ელექტრონიკა, მოდა, სახლი, სპორტი და სხვა."
+    />
+    <meta
+      name="keywords"
+      content="ონლაინ მარკეტი, ელექტრონიკა, მოდა, სახლი, სპორტი, MarketPlace"
+    />
+    <meta name="author" content="Tornike Khutsishvili" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">მთავარ კონტენტზე გადასვლა</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Market<span>Place</span></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="მენიუ"
+        >
+          ☰
+        </button>
+        <nav class="nav" id="main-nav" aria-label="მთავარი ნავიგაცია">
+          <ul>
+            <li><a href="index.html" aria-current="page">მთავარი</a></li>
+            <li><a href="catalog.html">კატალოგი</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+            <li><a href="account.html">შესვლა</a></li>
+            <li>
+              <a class="cart-link" href="cart.html"
+                >🛒 კალათა<span class="cart-badge" data-cart-count>0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <p class="copyright">© <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე ხუციშვილი.</p>
-    </div>
-  </footer>
+    </header>
 
-  <script src="js/data.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/slider.js" defer></script>
-  <script src="js/home.js" defer></script>
-</body>
+    <main id="content">
+      <div class="container">
+        <section
+          class="slider"
+          data-slider
+          aria-roledescription="carousel"
+          aria-label="აქციები"
+        >
+          <div class="slider-track">
+            <article class="slide slide--1">
+              <h1>გაზაფხულის დიდი გაყიდვა</h1>
+              <p>
+                ელექტრონიკაზე 30%-მდე ფასდაკლება. შეუკვეთეთ დღესვე და მიიღეთ
+                უფასო მიტანა.
+              </p>
+              <p>
+                <a
+                  class="btn btn--accent"
+                  href="catalog.html?category=electronics"
+                  >ყიდვა</a
+                >
+              </p>
+            </article>
+            <article class="slide slide--2">
+              <h2>გახდი გამყიდველი</h2>
+              <p>
+                განათავსე შენი პროდუქტები და მიაღწიე ათასობით მყიდველს მთელ
+                საქართველოში.
+              </p>
+              <p>
+                <a class="btn btn--accent" href="contact.html">დაგვიკავშირდი</a>
+              </p>
+            </article>
+            <article class="slide slide--3">
+              <h2>სპორტი და ჯანმრთელობა</h2>
+              <p>აღჭურვილობა ვარჯიშისთვის საუკეთესო ფასებად.</p>
+              <p>
+                <a class="btn btn--accent" href="catalog.html?category=sports"
+                  >ნახე კოლექცია</a
+                >
+              </p>
+            </article>
+          </div>
+          <button
+            class="slider-btn slider-btn--prev"
+            type="button"
+            aria-label="წინა სლაიდი"
+          >
+            ‹
+          </button>
+          <button
+            class="slider-btn slider-btn--next"
+            type="button"
+            aria-label="შემდეგი სლაიდი"
+          >
+            ›
+          </button>
+          <div class="slider-dots"></div>
+        </section>
+
+        <section class="section" aria-labelledby="cat-title">
+          <div class="section-head"><h2 id="cat-title">კატეგორიები</h2></div>
+          <div class="category-grid" id="category-list"></div>
+        </section>
+
+        <section class="section" aria-labelledby="top-title">
+          <div class="section-head">
+            <h2 id="top-title">ყველაზე პოპულარული</h2>
+            <a href="catalog.html">ყველა პროდუქტი →</a>
+          </div>
+          <div class="product-grid" id="featured-list"></div>
+        </section>
+
+        <section class="section" aria-labelledby="why-title">
+          <div class="section-head">
+            <h2 id="why-title">რატომ MarketPlace?</h2>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <span class="icon" aria-hidden="true">🚚</span>
+              <h3>სწრაფი მიტანა</h3>
+              <p>თბილისში — 24 საათში, რეგიონებში — 2-3 დღეში.</p>
+            </div>
+            <div class="feature">
+              <span class="icon" aria-hidden="true">🔒</span>
+              <h3>დაცული გადახდა</h3>
+              <p>თქვენი მონაცემები და გადახდები დაცულია.</p>
+            </div>
+            <div class="feature">
+              <span class="icon" aria-hidden="true">↩️</span>
+              <h3>მარტივი დაბრუნება</h3>
+              <p>14 დღე პროდუქტის უპრობლემო დაბრუნებისთვის.</p>
+            </div>
+            <div class="feature">
+              <span class="icon" aria-hidden="true">⭐</span>
+              <h3>გადამოწმებული გამყიდველები</h3>
+              <p>მხოლოდ რეიტინგიანი და სანდო გამყიდველები.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h2>MarketPlace</h2>
+            <p>ონლაინ პლატფორმა მყიდველებისა და გამყიდველებისთვის.</p>
+          </div>
+          <div>
+            <h2>ნავიგაცია</h2>
+            <ul>
+              <li><a href="catalog.html">კატალოგი</a></li>
+              <li><a href="cart.html">კალათა</a></li>
+              <li><a href="account.html">ანგარიში</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>კონტაქტი</h2>
+            <address>
+              თბილისი, საქართველო<br /><a href="mailto:info@marketplace.ge"
+                >info@marketplace.ge</a
+              >
+            </address>
+          </div>
+        </div>
+        <p class="copyright">
+          © <span id="year">2025</span> MarketPlace. სასწავლო პროექტი — თორნიკე
+          ხუციშვილი.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
 </html>
